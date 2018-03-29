@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Begin Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="ex1">
+      <p>I am {{ age }} years old</p>
+      <button v-on:click.once="addOne(1)">Add</button>
+      <button v-on:dblclick="addOne(10)">Add 10</button>
+      <div v-on:mousemove="updateXY" style="width: 200px; height: 200px; border: 1px solid black">{{ x}}, {{ y }}</div>
+      <!-- Keyboard event -->
+      <form>
+        <input type="text" name="name" v-on:keyup.enter="logName">
+        <input type="text" name="age" v-on:keyup="logAge">
+      </form>
+      <!-- Two-Way Data Binding -->
+      <input type="text" name="test" v-model="test"> {{ test }}
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

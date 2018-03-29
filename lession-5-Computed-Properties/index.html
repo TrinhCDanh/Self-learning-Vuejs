@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Begin Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="ex1">
+      <p>I am {{ age }} years old</p>
+      <button v-on:click="a++">Add A</button>
+      <button v-on:click="b++">Add B</button>
+      <p>a - {{ a }}</p>
+      <p>b - {{ b }}</p>
+      <p>Age + a = {{ addA }}</p>
+      <p>Age + b = {{ addB }}</p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- computed có tác dụng theo dõi sự thay đỏi của biến mà nó đang thay đổi
+không như method nó sẽ theo dõi cả những biến không thay đỏi.
+ -->
