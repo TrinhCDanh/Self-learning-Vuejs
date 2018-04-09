@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Begin Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="ex1">
+      <p>Test component</p>
+      <p><strong>Name: </strong>{{ name }}</p>
+      <input type="text" name="txtName" ref="namerefs">
+      <button type="button" class="btn btn-primary" v-on:click="readRefs()">GO</button>
+    </div>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- dùng thẻ template sẽ không hiện ra khi biên dịch html trên browser
+ -->

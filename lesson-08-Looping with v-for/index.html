@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Begin Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="ex1">
+        <ul>
+          <li v-for="(item, index) in arr">{{index}} - {{item}}</li>
+        </ul>
+        <template v-for="(item, index) in arrobj">
+          <h4>{{ item.name }}</h4>
+          <p>{{ item.age }}</p>
+        </template>
+        <template v-for="item in arrobj">
+          <div v-for="(val, key) in item">
+            <p>{{ key }} - {{ val }}</p>
+          </div>
+        </template>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- dùng thẻ template sẽ không hiện ra khi biên dịch html trên browser
+ -->
